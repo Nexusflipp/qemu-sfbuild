@@ -27,6 +27,7 @@ First cd into the project directory, then run the following commands:
 makepkg -s -i --skippgpcheck --skipchecksums
 ```
 
+<br>
 
 ## Documentation
 
