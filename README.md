@@ -1,23 +1,21 @@
-# seabios-spf
+# CUSTOMIZED SEABIOS PKGBUILD SCRIPT
 
 
 <br>
 
 <p align="center"> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/tokei/lines/github/nexusflipp/seabios-sp"/> </a>
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/issues/nexusflipp/seabios-sp"/> </a>
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/top/nexusflipp/seabios-sp"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/count/nexusflipp/seabios-sp"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/last-commit/nexusflipp/seabios-sp"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/repo-size/nexusflipp/seabios-sp"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/code-size/nexusflipp/seabios-sp"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/tokei/lines/github/Nexusflipp/qemu-sfbuild"/> </a>
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/issues/Nexusflipp/qemu-sfbuild"/> </a>
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/top/Nexusflipp/qemu-sfbuild"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/count/Nexusflipp/qemu-sfbuild"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/last-commit/Nexusflipp/qemu-sfbuild"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/repo-size/Nexusflipp/qemu-sfbuild"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/code-size/Nexusflipp/qemu-sfbuild"/> </a> 
 </p>
 
 <br>
 
-Custom/Spoofed seabios source.
-Please see build and developer information at: http://seabios.org/Developer_Documentation
-SeaBIOS is built for QEMU and tested on QEMU.
+QEMU is a free and open-source hypervisor. It emulates the machine's processor through dynamic binary translation and provides a set of different hardware and device models for the machine, enabling it to run a variety of guest operating systems.
 
 <br>
 
@@ -26,15 +24,10 @@ SeaBIOS is built for QEMU and tested on QEMU.
 First cd into the project directory, then run the following commands:
 
 ```shell
-make menuconfig 
+makepkg -s -i --skippgpcheck --skipchecksums
 ```
 
-```shell
-make
-```
 
-```shell
-qemu -bios out/bios.bin
-```
+##Documentation
 
-Or you could use my PKGBUILD file.
+The official documentation: https://www.qemu.org/docs/master/
