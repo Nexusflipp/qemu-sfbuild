@@ -1,36 +1,40 @@
-# CUSTOMIZED QEMU PKGBUILD SCRIPT 
+# seabios-spf
 
 
 <br>
 
 <p align="center"> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/issues/Nexusflipp/qemu-sfbuild"/> </a>
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/top/Nexusflipp/qemu-sfbuild"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/count/Nexusflipp/qemu-sfbuild"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/last-commit/Nexusflipp/qemu-sfbuild"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/repo-size/Nexusflipp/qemu-sfbuild"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/code-size/Nexusflipp/qemu-sfbuild/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/tokei/lines/github/nexusflipp/seabios-sp"/> </a>
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/issues/nexusflipp/seabios-sp"/> </a>
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/top/nexusflipp/seabios-sp"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/count/nexusflipp/seabios-sp"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/last-commit/nexusflipp/seabios-sp"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/repo-size/nexusflipp/seabios-sp"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/code-size/nexusflipp/seabios-sp"/> </a> 
 </p>
 
 <br>
 
+Custom/Spoofed seabios source.
+Please see build and developer information at: http://seabios.org/Developer_Documentation
+SeaBIOS is built for QEMU and tested on QEMU.
 
-This PKGBUILD script installs a slightly customized version of Qemu.
-QEMU is a free and open-source hypervisor. It emulates the machine's processor through dynamic binary translation and provides a set of different hardware and device models for the machine, enabling it to run a variety of guest operating systems.
 <br>
 
-Building
-========
+## Build Instructions
 
-First cd into the project directory, then run the following command:
+First cd into the project directory, then run the following commands:
 
 ```shell
-makepkg -s -i --skippgpcheck --skipchecksums
+make menuconfig 
 ```
-  
-<br>  
 
-Documentation
-=============
+```shell
+make
+```
 
-The official documentation is available here: https://www.qemu.org/documentation/.
+```shell
+qemu -bios out/bios.bin
+```
+
+Or you could use my PKGBUILD file.
